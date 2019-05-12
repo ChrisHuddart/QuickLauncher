@@ -31,6 +31,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // establish a reference to the on-screen secondActivityButton button
+        Button secondActivityButton = (Button) findViewById(R.id.secondActivityButton);
+        // set an 'on click' listener activity
+        secondActivityButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent startIntent = new Intent (getApplicationContext(), SecondActivity.class);
+
+                //Add parameters to be passed to the SecondActivity class that is called when the
+                //secondActivityButton on the MainActivity screen (MainActivity.View ??)
+                startIntent.putExtra("com.example.quicklauncher.FIRSTNAME", "First value");
+                startActivity(startIntent);
+            }
+        });
+
+
         // Button secondActivityButton = (Button) findViewById(R.id.googleSearchButton);
 
 

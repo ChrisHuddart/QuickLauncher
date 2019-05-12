@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // establish a reference to the on-screen secondActivityButton button
+        // & set an 'on click' listener activity
         Button googleSearchButton = (Button) findViewById(R.id.googleSearchButton);
-        // set an 'on click' listener activity
         googleSearchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // setup URL to be sent to the browser (or parameters for any other external app)
                 // String tempGoogleURL = "https://google.com";
-                // a URI (Universal Resource Identifier is used to send parameters to external app??
+                // a URI (Universal Resource Identifier) is used to send parameters to external app??
                 // x = String "https://google.com";
                 Uri googleURI = Uri.parse((String) "https://google.com");
 
@@ -55,10 +55,5 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-
-        // Button secondActivityButton = (Button) findViewById(R.id.googleSearchButton);
-
-
     }
 }
